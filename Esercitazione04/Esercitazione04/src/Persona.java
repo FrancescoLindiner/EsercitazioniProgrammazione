@@ -1,0 +1,54 @@
+public class Persona {
+    private String nome, cognome;
+    private int eta;
+
+    public Persona(String nome, String cognome, int eta) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.eta = eta;
+    }
+
+    public Persona() {
+        this.nome = "Nessun nome inserito";
+        this.cognome = "Nessun cognome inserito";
+        this.eta = -1;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public int getEta() {
+        return eta;
+    }
+
+    public void setEta(int eta) {
+        this.eta = eta;
+    }
+
+    public String toString() {
+        return "Nome: " + getNome() + "\nCognome: " + getCognome() + "\nEta': " + getEta();
+    }
+
+    public boolean equals(Persona p1, Persona p2) {
+        boolean uguali = false;
+
+        if(p1.getNome().equals(p2.getNome()) && p2.getCognome().equals(p2.getCognome()) && p1.getEta()==p2.getEta()){
+            uguali=true;
+        }
+        return uguali;
+    }
+
+}

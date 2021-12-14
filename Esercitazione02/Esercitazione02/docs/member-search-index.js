@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"it.unipa.prg.es02","c":"Quadrato","l":"area()"},{"p":"it.unipa.prg.es02","c":"Quadrato","l":"perimetro()"},{"p":"it.unipa.prg.es02","c":"Quadrato","l":"Quadrato(int)","u":"%3Cinit%3E(int)"}];updateSearchResults();

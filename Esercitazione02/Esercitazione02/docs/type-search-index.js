@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"it.unipa.prg.es02","l":"Quadrato"}];updateSearchResults();
