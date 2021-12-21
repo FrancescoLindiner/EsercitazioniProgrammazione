@@ -14,7 +14,7 @@ public class Persona {
         this.nome = "Nessun nome inserito";
         this.cognome = "Nessun cognome inserito";
         this.eta = -1;
-        this.dataDiNascita = new Data(1, " ", 1970);
+        this.dataDiNascita = new Data(1, "-", 1970);
     }
 
     public String getNome() {
