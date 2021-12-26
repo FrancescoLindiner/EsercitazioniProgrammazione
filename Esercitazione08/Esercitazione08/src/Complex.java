@@ -1,27 +1,48 @@
-public class Complex extends Numero implements Aritmetica {
+public class Complex {
 
-    @Override
-    public Numero addizione(Numero n1, Numero n2) {
-        // TODO Auto-generated method stub
+    private int parteReale, parteImmaginaria;
+
+    public Complex(int pR, int pI) {
+        this.parteReale = pR;
+        this.parteImmaginaria = pI;
+    }
+
+    public Complex() {
+        this(0, 0);
+    }
+
+    public int getParteImmaginaria() {
+        return parteImmaginaria;
+    }
+
+    public int getParteReale() {
+        return parteReale;
+    }
+
+    public Complex somma(Complex c) {
+        int parteReale = getParteReale() + c.getParteReale();
+        int parteImmaginaria = getParteImmaginaria() + c.getParteImmaginaria();
+
+        return new Complex(parteReale, parteImmaginaria);
+    }
+
+    public Complex sottrazione(Complex c){
+        int parteReale = getParteReale() - c.getParteReale();
+        int parteImmaginaria = getParteImmaginaria() - c.getParteImmaginaria();
+
+        return new Complex(parteReale, parteImmaginaria);
+    }
+
+    public Complex moltiplicazione(Complex c){
         return null;
     }
 
-    @Override
-    public Numero sottrazione(Numero n1, Numero n2) {
-        // TODO Auto-generated method stub
-        return null;
+    public String toString()
+    {
+        String out="";
+        if (parteImmaginaria > 0) out="(" +parteReale + " + " + parteImmaginaria +"i)";
+        else out="(" +parteReale+ " - " + (-parteImmaginaria) +"i)";
+        return out;
+        
     }
-
-    @Override
-    public Numero moltiplicazione(Numero n) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Numero divisione(Numero n1, Numero n2) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    
 }
