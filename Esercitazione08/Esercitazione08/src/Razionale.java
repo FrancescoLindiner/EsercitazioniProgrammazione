@@ -1,4 +1,4 @@
-public class Razionale{
+public class Razionale extends Numero{
 
     private int num, den;
 
@@ -20,34 +20,54 @@ public class Razionale{
         return num;
     }
 
-    public Razionale addizione(Razionale n){
-        
-        int num = this.num*n.getDen() + n.getNum()*this.den;
-        int den = this.den*n.getDen();
+    @Override
+    public Razionale addizione(Numero n){
+        if(!(n instanceof Razionale)){
+            System.out.println("Parametro sbagliato");
+            return null;
+        }
+        Razionale r = (Razionale)n;
+        int num = this.num*r.getDen() + r.getNum()*this.den;
+        int den = this.den*r.getDen();
 
         return new Razionale(num, den);
     }
 
-    public Razionale sottrazione(Razionale n){
-
-        int num = this.num*n.getDen() - n.getNum()*this.den;
-        int den = this.den*n.getDen();
+    @Override
+    public Razionale sottrazione(Numero n){
+        if(!(n instanceof Razionale)){
+            System.out.println("Parametro sbagliato");
+            return null;
+        }
+        Razionale r = (Razionale)n;
+        int num = this.num*r.getDen() - r.getNum()*this.den;
+        int den = this.den*r.getDen();
 
         return new Razionale(num, den);
     }
 
-    public Razionale moltiplicazione(Razionale n1) {
-    
-        int num = n1.getNum()*this.num;
-        int den = n1.getDen()*this.den;
+    @Override
+    public Razionale moltiplicazione(Numero n) {
+        if(!(n instanceof Razionale)){
+            System.out.println("Parametro sbagliato");
+            return null;
+        }
+        Razionale r = (Razionale)n;
+        int num = r.getNum()*this.num;
+        int den = r.getDen()*this.den;
         
         return new Razionale(num, den);
     }
 
-    public Razionale divisione(Razionale n){
-        
-        int num = this.num*n.getDen();
-        int den = this.den*n.getNum();
+    @Override
+    public Razionale divisione(Numero n){
+        if(!(n instanceof Razionale)){
+            System.out.println("Parametro sbagliato");
+            return null;
+        }
+        Razionale r = (Razionale)n;
+        int num = this.num*r.getDen();
+        int den = this.den*r.getNum();
 
         return new Razionale(num, den);
     }
