@@ -6,6 +6,11 @@ public class Vettore2D{
         setY(y);
     }
 
+    public Vettore2D(){
+        setX(0.0);
+        setY(0.0);
+    }
+
     public double getX(){
         return x;
     }

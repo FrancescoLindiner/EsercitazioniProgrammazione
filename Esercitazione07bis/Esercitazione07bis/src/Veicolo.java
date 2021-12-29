@@ -10,7 +10,12 @@ public class Veicolo {
     public void muovi(double t){
         double x = pos.getX() + vel.getX()*t + accel.getX()*t*t; 
         double y = pos.getY() + vel.getY()*t + accel.getY()*t*t;
-    }
 
-
+        pos.setX(x);
+		pos.setY(y);
+	}
+	
+	public String posizione(){
+		return "(" + pos.getX() + ", " + pos.getY() + ")";
+	}
 }
