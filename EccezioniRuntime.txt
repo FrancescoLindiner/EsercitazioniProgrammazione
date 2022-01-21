@@ -1,0 +1,1 @@
+RuntimeException sono unchecked, non abbiamo bisogno di dire esplicitamente che potremmo lanciare questa eccezione
